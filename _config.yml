@@ -1,8 +1,8 @@
 excerpt_separator: ""
-pygments: true
 markdown: kramdown
+highlighter: rouge
 url: http://rauljrz.github.io
 title: Raul Juarez
 tagline: A log of everyday life
-description: My awesome new site
+description: {raulJRZ}
 paginate: 5

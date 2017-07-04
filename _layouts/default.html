@@ -4,13 +4,27 @@
 	{% include head.html %}
 
 	<body>
+		<div class="page-wrapper">
+			{% include nav.html %}
 
-		{% include sidebar.html %}
+			<div class="content container">
+				{{ content }}
+			</div>
 
-		<div class="content container">
-			{{ content }}
+			{% include footer.html %}
 		</div>
 
-		{% include footer.html %}
+		<!-- SCROLL DE PANTALLA -->
+		<script type="text/javascript" src="js/waypoints/jquery.waypoints.min.js"></script>
+		<script type="text/javascript" src="js/mdetect.min.js"></script>
+
+		<!-- Touch Event Support for jQuery UI -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js" type="text/javascript" charset="utf-8" async defer></script>
+
+		<!-- CAPTCHA para mobiles -->
+		<script type="text/javascript" src="js/qaptcha/QapTcha.jquery.js"></script>
+
+		<!-- del sistema --> 
+		<script type="text/javascript" src="js/content/interface.js"></script>
 	</body>
 </html>
