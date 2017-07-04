@@ -1,28 +1,63 @@
 <head>
-  <link href="http://gmpg.org/xfn/11" rel="profile">
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<link href="http://gmpg.org/xfn/11" rel="profile">
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
 
-  <!-- Enable responsiveness on mobile devices-->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+	<!-- Enable responsiveness on mobile devices-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
-  <title>
-    {% if page.title == "Home" %}
-      {{ site.title }} &middot; {{ site.tagline }}
-    {% else %}
-      {{ page.title }} &middot; {{ site.title }}
-    {% endif %}
-  </title>
+	<script type="text/javascript" src="js/jquery.min.js"></script>	
+	<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="/public/css/poole.css">
-  <link rel="stylesheet" href="/public/css/syntax.css">
-  <link rel="stylesheet" href="/public/css/hyde.css">
-  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+	<!-- Core CSS  -->
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-datetimepicker.min.css">
 
-  <!-- Icons -->
-  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-144-precomposed.png">
-                                 <link rel="shortcut icon" href="/public/favicon.ico">
+	<!-- ICONS -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/1ab4e5400c.css">
 
-  <!-- RSS -->
-  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+	<!-- FONTS -->
+	<link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel='stylesheet' type='text/css'>
+
+	<!-- CUSTOM CSS -->
+	<link rel="stylesheet" type="text/css" href="css/content/main.css">
+
+	<!-- Favicon -->
+	<link rel="shortcut icon" type="image/png" href="images/favicon.png">
+        
+	<!-- Loading -->
+	<script type="text/javascript" src="js/pace.min.js"></script>
+
+	<!-- Para cargar RSS -->
+	<link rel="alternate" title="RSS" href="http://rauljrz.tk/rss.xml" type="application/rss+xml" />
+
+	<!-- MOBILE ICONS -->
+	<link rel="apple-touch-icon" href="images/icons/Icon-60%402x.png" />
+	<link rel="apple-touch-icon" sizes="180x180" href="images/icons/Icon-60%403x.png" />
+	<link rel="apple-touch-icon" sizes="76x76" href="images/icons/Icon-76.png" />
+	<link rel="apple-touch-icon" sizes="152x152" href="images/icons/Icon-76%402x.png" />
+	<link rel="apple-touch-icon" sizes="58x58" href="images/icons/Icon-Small%402x.png" />
+	<meta name="apple-mobile-web-app-capable" content="yes">
+
+	<title>
+		{% if page.title == "Home" %}
+			{{ site.title }} &middot; {{ site.tagline }}
+		{% else %}
+			{{ page.title }} &middot; {{ site.title }}
+		{% endif %}
+	</title>
+
+	<!-- CSS -->
+	<!-- <link rel="stylesheet" href="/public/css/poole.css">
+	<link rel="stylesheet" href="/public/css/syntax.css">
+	<link rel="stylesheet" href="/public/css/hyde.css">
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface"> -->
+
+	<!-- Icons -->
+	<!-- <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-144-precomposed.png">
+	<link rel="shortcut icon" href="/public/favicon.ico"> -->
+
+	<!-- RSS -->
+	<link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
 </head>
