@@ -1,37 +1,564 @@
----
-layout: default
-title: Home
----
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="keywords" content="web, desarrollo web, software desarrollo software, ingeniero, ingeniero del software, experto, app, aplicaciones web, mobile, web 2.0, saas, erp, ecommerce" />
+	<meta name="description" content="Desarrollo de aplicaciones web con la última tecnología y el mejor diseño. Tu proyecto en internet desarrollado con criterios científicos. Tu tienda online usable y con un alto rendimiento.">
+	<meta property="og:title" content="Raul Juarez - Ingenieria en Sisteams - Desarrollo aplicaciones web y Desktop" />
+	<meta property="og:description" content="Analista Testing | SAP CRM, ERP | {web: design & social management} | {it: consulting & recruiting 2.0} | {dev: php| python| perl| mysql| vfp} |{frame: Yii| Laravel| } {rauljrz}" />
+	<meta property="og:image" content="images/icons/facebook.png" />
+	<meta name="author" content="rauljrz.tk">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
 
-<div class="posts">
-  {% for post in paginator.posts %}
-  <div class="post">
-    <h1 class="post-title">
-      <a href="{{ post.url }}">
-        {{ post.title }}
-      </a>
-    </h1>
+	<script type="text/javascript" src="js/jquery.min.js"></script>	
+	<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
 
-    <span class="post-date">{{ post.date | date_to_string }}</span>
+	<!-- Core CSS  -->
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-datetimepicker.min.css">
 
-    {{ post.content }}
-  </div>
-  {% endfor %}
-</div>
+	<!-- ICONS -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/1ab4e5400c.css">
 
-<div class="pagination">
-  {% if paginator.next_page %}
-    <a class="pagination-item older" href="/page{{paginator.next_page}}">Antiguos</a>
-  {% else %}
-    <span class="pagination-item older">Antiguos</span>
-  {% endif %}
-  {% if paginator.previous_page %}
-    {% if paginator.page == 2 %}
-      <a class="pagination-item newer" href="/">Recientes</a>
-    {% else %}
-      <a class="pagination-item newer" href="/page{{paginator.previous_page}}">Recientes</a>
-    {% endif %}
-  {% else %}
-    <span class="pagination-item newer">Recientes</span>
-  {% endif %}
-</div>
+	<!-- FONTS -->
+	<link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel='stylesheet' type='text/css'>
+
+	<!-- CUSTOM CSS -->
+	<link rel="stylesheet" type="text/css" href="css/content/main.css">
+
+	<!-- Favicon -->
+	<link rel="shortcut icon" type="image/png" href="images/favicon.png">
+        
+	<!-- Loading -->
+	<script type="text/javascript" src="js/pace.min.js"></script>
+
+	<!-- Para cargar RSS -->
+	<link rel="alternate" title="RSS" href="http://rauljrz.tk/rss.xml" type="application/rss+xml" />
+
+	<!-- MOBILE ICONS -->
+	<link rel="apple-touch-icon" href="images/icons/Icon-60%402x.png" />
+	<link rel="apple-touch-icon" sizes="180x180" href="images/icons/Icon-60%403x.png" />
+	<link rel="apple-touch-icon" sizes="76x76" href="images/icons/Icon-76.png" />
+	<link rel="apple-touch-icon" sizes="152x152" href="images/icons/Icon-76%402x.png" />
+	<link rel="apple-touch-icon" sizes="58x58" href="images/icons/Icon-Small%402x.png" />
+	<meta name="apple-mobile-web-app-capable" content="yes">
+
+	<title>Raúl Juárez - Ingenieria en Sistemas - Desarrollo aplicaciones web y Desktop - {raulJrz}</title>
+</head>
+<body>
+	<div class="page-wrapper">
+		<nav class="main-menu">
+			<div class="container-fluid container">
+			    <div class="col-sm-4 col">
+			        <div class="menu-item">
+			            <a href="portfolio.html">
+			                <span class="num-title">01.</span>
+			                Mis Trabajos
+			                <span class="subtitle">Lo que hago</span>
+			            </a>
+			        </div>
+			    </div>
+			    <div class="col-sm-4 col">
+			        <div class="menu-item">
+			            <a href="blog.html">
+			                <span class="num-title">02.</span>
+			                M&iacute;s notas
+			                <span class="subtitle">Lo que escribo</span>
+			            </a>
+			        </div>
+			    </div>
+			    <div class="col-sm-4 col">
+			        <div class="menu-item">
+			            <a href="about.html">
+			                <span class="num-title">03.</span>
+			                Sobre m&iacute;	
+			                <span class="subtitle">Lo que soy / D&oacute;nde estoy</span>
+			            </a>
+			        </div>
+			    </div>
+			</div>
+
+			<div class="phone-wrapper">
+			    <a href="tel:+54 1134426513" class="phone">+54 1134426513</a>
+			</div>
+			<div class="mail-wrapper">
+			    <a href="mailto:raul.jrz@gmail.com" class="mail">raul.jrz@gmail.com</a>
+			</div>
+		</nav>
+		<nav class="navbar navbar-default" id="top-navbar">
+			<div class="container-fluid">
+			    <div class="navbar-header">
+			        <a class="navbar-brand" href="es.html">Ra&uacute;l Ju&aacute;rez - Ingenier&iacute;a en Sistemas {raulJRZ};</a>
+			        <ul class="nav navbar-nav">
+			            <li>
+			                <a href="#" id="menu-button">
+			                    <span class="icons menu-icon-wrapper">
+			                        <span class="menu-icon"></span>
+			                    </span>
+			                    <span class="title">Men&uacute;</span>
+			                    <span class="close-title">Cerrar</span>
+			                </a>
+			            </li>
+			        </ul>
+			    </div>
+			</div>
+		</nav>
+
+		<header class="front-header" id="main-header">
+		    <div class="background-overlay"></div>
+		    <div class="background-video-wrapper">
+		        <video loop="loop" preload="auto" id="typing-video" class="background-video">
+		            <source src="videos/home_video.mp4" type="video/mp4">
+		            <source src="videos/home_video.webm" type="video/webm">
+		        </video>
+		    </div>
+
+		    <div class="caption-wrapper">
+		        <div class="caption">
+		            <h1>HAZLO REALIDAD!</h1>
+		            <p class="subtitle">
+		                "Todos nuestros sueños pueden hacerse realidad, si tenemos el coraje de perseguirlos."<BR>– Walt Disney		</p>
+		        </div>
+		    </div>
+
+		    <div class="arrow-wrapper">
+		        <a href="#" class="arrow" id="arrow-down-header">
+		            <i class="fa fa-chevron-down arrow1"></i>
+		            <i class="fa fa-chevron-down arrow2"></i>
+		        </a>
+		    </div>
+		</header>
+
+		<!-- QUE HAGO? -->
+		<section class="content-wrapper what" id="what-section">
+		    <div class="title-block">
+		        <h2 class="title"> <span>¿Qué</span> hago?</h2>
+		        <p class="subtitle">Hago lo que me apasiona, el desarrollo de aplicaciones web/desktop con tecnología de punta.</p>
+		    </div>
+		    <div class="content-block">
+		        <div class="container-fluid">
+		            <div class="row">
+		                <div class="col-sm-4 col">
+		                    <div class="box">
+		                        <h3 class="title">CLOUD ERP</h3>
+		                        <div class="content">
+		                            <p><strong>Software de gesti&oacute;n online</strong>&nbsp;para tu empresa. 
+		                                Completamente a medida, teniendo en cuenta tus necesidades y 
+		                                aportando soluciones para automatizar cada proceso de negocio.
+		                                <strong>Sistema de Control de Tiempo, CRM,
+		                                ERP, CMS, Clasificados, Reserva de Turnos</strong>
+		                            </p>
+		                        </div>
+		                        <i class="fa fa-cloud background-icon"></i>
+		                    </div>
+		                </div>
+		                <div class="col-sm-4 col">
+		                    <div class="box">
+		                        <h3 class="title">SOFTWARE DESKTOP</h3>
+		                        <div class="content">
+		                            <p>Dispongo de una amplia variedad de <strong>Sistemas de Gestión </strong>para tu compa&ntilde;ia.
+		                                Aplicaciones probadas durante años en distintas empresas.
+		                                Facturación, Restaurant, Delivery,
+		                                Estudio Contable, Liquidación de Sueldos, Control de Flujo de Fondos. </p>
+		                        </div>
+		                        <i class="fa fa-shopping-cart background-icon"></i>
+		                    </div>
+		                </div>
+		                <div class="col-sm-4 col">
+		                    <div class="box">
+		                        <h3 class="title">DISEÑO WEB</h3>
+		                        <div class="content">
+		                            <p>&iquest;Quer&eacute;s poner a tu empresa en <strong>Internet</strong>?<br><strong>¡Yo te puedo ayudar!</strong>. 
+		                                Te asesoro, desde el primer momento, a&nbsp;
+		                                <a href="http://es.wikipedia.org/wiki/Software#Procesos.2C_modelado_y_formas_de_elicitaci.C3.B3n_de_requisitos" target="_blank">
+		                                 Modelar y Establecer</a>&nbsp;
+		                                 los requisitos y a estudiar la viabilidad del proyecto.&nbsp;Dispongo de la experiencia
+		                                 necesaria para llevar a buen puerto tus sueños.</p>
+		                        </div>
+		                        <i class="fa fa-flask background-icon"></i>
+		                    </div>
+		                </div>
+		            </div>
+		        </div>
+		    </div>
+		</section>
+	
+		<!-- COMO LO HAGO -->
+		<section class="content-wrapper how" id="how-section">
+		    <div class="title-block">
+		        <h2 class="title"><span>¿Cómo</span> lo hago?</h2>
+		        <p class="subtitle">
+				Estas son las etapas que sigo para el desarrollo de un Proyecto, buscando siempre la satisfacción del cliente.
+				</p>
+		    </div>
+		    <div class="content-block">
+		        <div id="how-carousel" class="carousel slide vertical" data-ride="carousel" data-interval="false">
+		            <ol class="carousel-indicators">
+		                <li class="active"><a href="#" data-target="#how-carousel" data-slide-to="0" title="Creación del concepto">1</a></li>
+		                <li><a href="#" data-target="#how-carousel" data-slide-to="1" title="Definición de requisitos">2</a></li>
+		                <li><a href="#" data-target="#how-carousel" data-slide-to="2" title="Diseño de Prototipo">3</a></li>
+		                <li><a href="#" data-target="#how-carousel" data-slide-to="3" title="Programación">4</a></li>
+		                <li><a href="#" data-target="#how-carousel" data-slide-to="4" title="Presentación de Prueba">5</a></li>
+		                <li><a href="#" data-target="#how-carousel" data-slide-to="5" title="Tus cambios">6</a></li>
+		                <li><a href="#" data-target="#how-carousel" data-slide-to="6" title="Implementación">7</a></li>
+		                <li><a href="#" data-target="#how-carousel" data-slide-to="7" title="Marketing Online">8</a></li>
+		            </ol>
+
+		            <div class="carousel-inner" role="listbox">
+		                <div class="item active">
+		                    <div class="img-container">
+		                        <img src="images/how/01-crecion_del_concepto.png" alt="Desarrollo Software - Creación del concepto">
+		                    </div>
+		                    <div class="carousel-caption">
+		                        <h3 class="title">Creación del concepto</h3>
+		                        <div class="content">
+		                            <p>Es la parte en la que el cliente tiene total responsabilidad. <strong>&iquest;Qu&eacute; quiere exactamente?</strong> 
+		                                &iquest;Cu&aacute;l es la idea? &iquest;C&oacute;mo son los procesos de negocio de su compa&ntilde;&iacute;a? 
+		                                Lo llevamos a cabo mediante reuniones f&iacute;sicas, tel&eacute;fonicas o por Skype, en las que esclarecemos 
+		                                totalmente c&oacute;mo ser&aacute; la aplicaci&oacute;n de una manera &quot;conceptual&quot;.</p>
+		                        </div>
+		                    </div>
+		                </div>
+		                <div class="item">
+		                    <div class="img-container">
+		                        <img src="images/how/02-definicion_de_requisitos.jpg" alt="Desarrollo Software - Definición de requisitos">
+		                    </div>
+		                    <div class="carousel-caption">
+		                        <h3 class="title">Definición de requisitos</h3>
+		                        <div class="content">
+		                            <p>Formalizo&nbsp;las necesidades del cliente como <strong>requisitos del sistema</strong>. 
+		                                Una vez que los tengo a todos &quot;bosquejados&quot;, planifico los 
+		                                <a href="https://es.wikipedia.org/wiki/Scrum_(desarrollo_de_software)#Planificaci.C3.B3n_del_Sprint_.28Sprint_Planning.29" target="_blank">Sprint</a> y doy una fecha estimada de 
+		                                finalizaci&oacute;n del proyecto. En este paso, consulto frecuentemente al cliente para estar seguro de que la 
+		                                formalizaci&oacute;n del concepto sea la adecuada.</p>
+		                        </div>
+		                    </div>
+		                </div>
+		                <div class="item">
+		                    <div class="img-container">
+		                        <img src="images/how/03-prototipo.png" alt="Desarrollo Software - Diseño del Prototipo">
+		                    </div>
+		                    <div class="carousel-caption">
+		                        <h3 class="title">Diseño del Prototipo</h3>
+		                        <div class="content">
+		                            <p>Lleg&oacute; la hora de darle forma a la <strong>interfaz de usuarios</strong>. 
+		                                Una vez formalizados los requisitos, conozco exactamente los elementos que debe incluir el dise&ntilde;o 
+		                                (botones, formularios, iconos,...). Despu&eacute;s de dibujarlos, implemento el dise&ntilde;o en una p&aacute;gina 
+		                                HTML simple para poder hacerle una auditor&iacute;a de usabilidad,&nbsp;as&iacute; maximizo&nbsp;la 
+		                                <a href="http://es.wikipedia.org/wiki/Experiencia_de_usuario" target="_blank">experiencia de&nbsp;usuario</a>. 
+		                                El cliente da su aprobaci&oacute;n final antes de pasar a la siguiente fase.&nbsp;Si no est&aacute; 
+		                                satisfecho con la interfaz de usuario, se&nbsp;presentan cuantas sean necesarias.</p>
+		                        </div>
+		                    </div>
+		                </div>
+		                <div class="item">
+		                    <div class="img-container">
+		                        <img src="images/how/04-programacion.png" alt="Desarrollo Software - Programación">
+		                    </div>
+		                    <div class="carousel-caption">
+		                        <h3 class="title">Programación</h3>
+		                        <div class="content">
+		                            <p>Llego la hora de Codificar... Desarrollo&nbsp;las <strong>funcionalidades</strong> de la 
+		                                aplicaci&oacute;n web con la interfaz de usuario dise&ntilde;ada&nbsp;anteriormente. 
+		                                Realizo todos los Sprint organizados en el&nbsp;segunda paso. 
+		                                El lenguaje de programaci&oacute;n a utilizar en esta etapa ser&aacute; tambi&eacute;n&nbsp;especificado 
+		                                durante la <strong>Definici&oacute;n de Requisitos</strong>. Es una fase en la que el cliente interviene poco, 
+		                                pero est&aacute; informado en todo momento de la evoluci&oacute;n del proyecto.</p>
+		                        </div>
+		                    </div>
+		                </div>
+		                <div class="item">
+		                    <div class="img-container">
+		                        <img src="images/how/05-presentacion_de_pruebas.png" alt="Desarrollo Software - Presentación de Pruebas">
+		                    </div>
+		                    <div class="carousel-caption">
+		                        <h3 class="title">Presentación de Pruebas</h3>
+		                        <div class="content">
+		                            <p>Para evitar&nbsp;futuros <span style="line-height: 20.7999992370605px;">problemas</span>, 
+		                                realizo <strong>pruebas unitarias y pruebas de funcionalidad</strong>. Entrego un informe de las pruebas 
+		                                realizadas a los clientes indicando el resultado de cada una de ellas. Los errores que surjan durante 
+		                                las pruebas se van solucionando. Se repiten las pruebas una y otra vez hasta que la aplicaci&oacute;n 
+		                                pase todos los test con &eacute;xito.</p>
+		                        </div>
+		                    </div>
+		                </div>
+		                <div class="item">
+		                    <div class="img-container">
+		                        <img src="images/how/06-tus_comentarios.png" alt="Desarrollo Software - Tus cambios">
+		                    </div>
+		                    <div class="carousel-caption">
+		                        <h3 class="title">Tus cambios</h3>
+		                        <div class="content">
+		                            <p>Cuando el cliente ve la aplicaci&oacute;n web en funcionamiento, es normal que desee algunas 
+		                                peque&ntilde;as modificaciones.&nbsp;Normalmente suelen ser <strong>mejoras</strong> 
+		                                referentes a cosas que no se tuvieron en cuenta en la primera o la segunda etapa.&nbsp;
+		                                El cliente est&aacute; muy activo en este paso.</p>
+		                        </div>
+		                    </div>
+		                </div>
+		                <div class="item">
+		                    <div class="img-container">
+		                        <img src="images/how/07-implementacion.png" alt="Desarrollo Software - Implementación">
+		                    </div>
+		                    <div class="carousel-caption">
+		                        <h3 class="title">Implementación</h3>
+		                        <div class="content">
+		                            <p>Instalo la aplicaci&oacute;n web en el servidor definitivo donde se alojar&aacute;.&nbsp;Adem&aacute;s, 
+		                                realizo un <strong>seguimiento del log</strong> de&nbsp;errores, para subsanar&nbsp;aquellos que se 
+		                                hayan podido escapar.&nbsp;En este momento el proyecto ya es publico (si ese es su objetivo), 
+		                                comienza su vida en internet.</p>
+		                        </div>
+		                    </div>
+		                </div>
+		                <div class="item">
+		                    <div class="img-container">
+		                        <img src="images/how/08-marketing.png" alt="Desarrollo Software - Marketing Online">
+		                    </div>
+		                    <div class="carousel-caption">
+		                        <h3 class="title">Marketing Online</h3>
+		                        <div class="content">
+		                            <p>Esta etapa solo se aplica para sitios web. La promoción necesita preparación de etiquetas meta, análisis constante y subir la URL a los motores de búsqueda y directorios. La promoción de sitios web normalmente es un proceso constante debido a que los motores de búsqueda cambian constantemente. Subir una URL cada dos meses es lo ideal. </p>
+		                        </div>
+		                    </div>
+		                </div>
+		            </div>
+		            <a class="next-slide" href="#how-carousel" role="button" data-slide="next">
+		                <span>Siguiente paso</span>
+		                <i class="fa fa-chevron-down"></i>
+		            </a>
+		        </div>
+		    </div>
+		</section>
+
+		<!-- POR QUE LO HAGO -->
+		<section class="content-wrapper why" id="why-section">
+		    <div class="title-block">
+		        <h2 class="title"> <span>¿Porqué</span> lo hago?</h2>
+		        <p class="subtitle">Esta es mi filosofía, las cosas importantes en las que creo y me motivan a vivir.</p>
+		    </div>
+		    <div class="content-block" id="why-section-content">
+		        <div class="container-fluid">
+		            <div class="row">
+		                <div class="col-sm-8">
+		                    <div class="box">
+		                        <h3 class="title">Pasión por el trabajo</h3>
+		                        <div class="content">
+		                            <p>Hace m&aacute;s de 20 a&ntilde;os que vengo programando desde aplicaciones desktop y p&aacute;ginas webs. 
+		                                Mi primer ordenador fue una Commodre 64C, y desde ah&iacute; pase por diferentes lenguajes de programaci&oacute;  
+										como ser Visual Foxpro, Perl, PHP, Phyton, Javascript, etc y diferentes plataformas MS-Dos, Windows, Linux, Unix, Android.
+		                                Siempre teniendo en claro que lo m&iacute;o era esto... Eso es <strong>pasi&oacute;n por el trabajo</strong>.</p>
+
+		                            <p>Adoro lo que hago y espero seguir haci&eacute;ndolo durante mucho tiempo... &iexcl;Siempre buscando nuevos retos!</p>
+		                        </div>
+		                    </div>
+		                    <div class="box">
+		                        <h3 class="title">Profesionalismo y Etica</h3>
+		                        <div class="content">
+		                            <p>Son dos características importantes en el desarrollo de mi trabajo. Los proyectos los afronto con una gran honestidad y la responsabilidad. Esforzandome en cumplir lo mejor posible con los tiempos estipulados y siempre dando el mejor esfuerzo para que el proyecto sea todo un exito.</p>
+		                        </div>
+		                    </div>
+		                    <div class="box">
+		                        <h3 class="title">Simple pero elegante</h3>
+		                        <div class="content">
+		                            <p><span style="line-height: 20.7999992370605px;">Considero que <strong>el buen gusto, la elegancia y 
+		                                        el minimalismo</strong> son pilares fundamentales&nbsp;para el dise&ntilde;o de una buena interfaz de usuario. 
+		                                    La filosof&iacute;a de Apple, en su momento, hizo mucho bien a esto. Gran parte del &eacute;xito de un proyecto 
+		                                    viene dado por la realizaci&oacute;n de una interfaz de usuario bonita e intuitiva. La &quot;usablidad&quot; 
+		                                    es toda una ciencia que tiene a grandes profesionales detr&aacute;s.</span></p>
+		                        </div>
+		                    </div>
+		                </div>
+
+		                <div class="col-sm-4 hidden-xs mac-wrapper" id="mac-wrapper">
+		                    <div class="mac" id="mac">
+		                        <img src="images/content/mac.png" alt="Mac" />
+		                        <div class="backgrounds-wrapper">
+		                            <div class="backgrounds" id="mac-background">
+		                                <div class="background"><i class="fa fa-heartbeat"></i></div>
+		                                <div class="background"><i class="fa fa-graduation-cap"></i></div>
+		                                <div class="background"><i class="fa fa-users"></i></div>
+		                            </div>
+		                        </div>
+		                    </div>
+		                </div>
+		            </div>
+		        </div>
+		    </div>
+		</section>
+
+		<section class="content-wrapper more">
+			<div class="content-block">
+			    <div class="container-fluid">
+			        <div class="row">
+			            <div class="col-sm-4 col">
+			                <a href="blog.html" class="btn">Mis Notas</a>
+			            </div>
+			            <div class="col-sm-4 col">
+			                <a href="portfolio.html" class="btn">Mis Trabajos</a>
+			            </div>
+			            <div class="col-sm-4 col">
+			                <a href="about.html" class="btn">Sobre M&iacute;</a>
+			            </div>
+			        </div>
+			    </div>
+			</div>
+		</section>
+
+		<footer class="main-footer">
+		    <div class="top-footer">
+		        <a href="#" class="claim" data-toggle="modal" data-target="#modal-mih">
+		           {<span class="hash">R</span><span class="h">H</span>a<span class="h">zlo</span><span class="hash">ulJ</span>R<span class="h">eali</span><span class="h">dad!</span><span class="hash">Z</span>}
+		        </a>
+		    </div>
+		    <div class="bottom-footer">
+		        <div class="container-fluid">
+		            <div class="row">
+		                <div class="col-sm-4 col text-left">
+		                    <ul class="contact-data">
+		                        <li>
+		                            <a href="mailto:raul.jrz@gmail.com"><i class="fa fa-envelope"></i>raul.jrz@gmail.com</a>
+		                        </li>
+		                        <li>
+		                            <a href="tel:+541134426513"><i class="fa fa-phone"></i>+541134426513</a>
+		                        </li>
+		                    </ul>
+		                </div>
+		                <div class="col-sm-4 col text-center">Raúl Juárez &copy; 2017 &bull; <a href="aviso-legal.html">Avíso Legal</a></div>
+		                <div class="col-sm-4 col text-right">
+		                    <ul class="contact-data">
+		                        <li>
+		                            <a href="rss.xml" target="_blank" title="RSS"><i class="fa fa-rss"></i></a>
+		                        </li>
+		                        <li>
+		                            <a href="http://googleplus.com/rauljrz" target="_blank" title="Google+">
+		                                <i class="fa fa-google-plus"></i>
+		                            </a>
+		                        </li>
+		                        <li>
+		                            <a href="skype:rauljrz" target="_blank" title="Skype">
+		                                <i class="fa fa-skype"></i>
+		                            </a>
+		                        </li>
+		                        <li>
+		                            <a href="http://ar.linkedin.com/in/rauljrz" target="_blank" title="Linkedin">
+		                                <i class="fa fa-linkedin"></i>
+		                            </a>
+		                        </li>
+		                        <li>
+		                            <a href="http://twitter.com/rauljrz" target="_blank" title="Twitter">
+		                                <i class="fa fa-twitter"></i>
+		                            </a>
+		                        </li>
+		                    </ul>
+		                </div>
+		            </div>
+		        </div>
+		    </div>
+		</footer>
+
+
+	    <div class="modal fade" data-backdrop="static" id="modal-mih">
+			<div class="modal-dialog">
+			    <div class="modal-content">
+			        <div class="modal-header">
+			            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			            <h4 class="modal-title">¡Hazlo realidad!</h4>
+			        </div>
+
+			        <form method="post" action="http://rauljrz.tk/contact" id="contact-modal-form">
+			            <div class="modal-body">
+			                <p>Cuéntame tu idea/proyecto y te ayudo a hacerla realidad:</p>
+			                <div class="container-fluid">
+			                    <div class="row">
+			                        <div class="col-sm-12">
+			                            <div class="form-group">
+			                                <input class="form-control" type="text" name="name" id="mih-name" />
+			                                <label class="control-label" for="mih-name">
+			                                    <span class="control-label-content">Nombre</span>
+			                                </label>
+			                            </div>
+
+			                            <div class="form-group">
+			                                <input class="form-control" type="text" name="phone" id="mih-phone" />
+			                                <label class="control-label" for="mih-phone">
+			                                    <span class="control-label-content">Teléfono</span>
+			                                </label>
+			                            </div>
+
+			                            <div class="form-group">
+			                                <input class="form-control" type="text" name="email" id="mih-email" />
+			                                <label class="control-label" for="mih-email">
+			                                    <span class="control-label-content">Email</span>
+			                                </label>
+			                            </div>
+
+			                            <div class="form-group">
+			                                <textarea class="form-control" name="project" id="mih-idea"></textarea>
+			                                <label class="control-label" for="mih-idea">
+			                                    <span class="control-label-content">Idea/Proyecto</span>
+			                                </label>
+			                            </div>
+			                        </div>
+			                    </div>
+			                </div>
+			                <p>Arrastra la esfera hacia el lado derecho <small>(para demostrar que eres humano)</small>:</p>
+			                <div class="container-fluid">
+			                    <div class="row">
+			                        <div class="col-sm-12">
+			                            <div class="QapTcha"></div>
+			                        </div>
+			                    </div>
+			                </div>
+			            </div>
+			            <div class="modal-footer">
+			                <button type="submit" class="btn btn-success btn-send pull-right" id="mih-send" disabled>
+			                    <span class="btn-label">
+			                        ¡Hagámoslo!<i class="fa fa-paper-plane"></i>
+			                    </span>
+			                    <span class="spinner">
+			                        <i class="fa fa-spin fa-circle-o-notch"></i>
+			                    </span>
+			                    <span class="checkmark"></span>
+			                </button>
+			                <div class="text-danger hidden" id="mih-alert"></div>
+			            </div>
+			        </form>
+			        <div id="contact-modal-success">
+			            <div class="modal-body"></div>
+			        </div>
+			    </div>
+			</div>
+
+			<div class="phone-wrapper">
+			    <a href="tel:+541134426513" class="phone">+541134426513</a>
+			</div>
+			<div class="mail-wrapper">
+			    <a href="mailto:raul.jrz@gmail.com" class="mail">raul.jrz@gmail.com</a>
+			</div>
+		</div>
+
+		<a href="#" class="go-top" id="go-top">
+			<i class="fa fa-chevron-up"></i>
+		</a>
+
+	</div>
+
+	<!-- SCROLL DE PANTALLA -->
+	<script type="text/javascript" src="js/waypoints/jquery.waypoints.min.js"></script>
+	<script type="text/javascript" src="js/mdetect.min.js"></script>
+
+	<!-- Touch Event Support for jQuery UI -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js" type="text/javascript" charset="utf-8" async defer></script>
+
+	<!-- CAPTCHA para mobiles -->
+	<script type="text/javascript" src="js/qaptcha/QapTcha.jquery.js"></script>
+
+	<!-- del sistema --> 
+	<script type="text/javascript" src="js/content/home.js"></script>
+	<script type="text/javascript" src="js/content/interface.js"></script>
+
+</body>
+</html>
