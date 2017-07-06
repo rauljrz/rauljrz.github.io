@@ -3,36 +3,77 @@ layout: default
 title: Blog
 ---
 
-<div class="posts">
-	{% for post in paginator.posts %}
-		<div class="post">
-			<h1 class="post-title">
-				<a href="{{ post.url }}">
-					{{ post.title }}
-				</a>
-			</h1>
+<header class="section-header" id="main-header">
+</header>
 
-			<span class="post-date">{{ post.date | date_to_string }}</span>
-
-			{{ post.content }}
+<!-- Menu propio del blog -->
+<nav class="navbar navbar-section" id="navbar-section">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#section-navbar">
+				<span class="sr-only">Barra de navegación</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<p class="menu-active"></p>
 		</div>
-	{% endfor %}
-</div>
+		<div class="collapse navbar-collapse" id="section-navbar">
+			<ul class="nav navbar-nav">
+				<li class="active"><a href="blog.html">Todo</a></li>
+				<li ><a href="blog/3/web.html">Web</a></li>
+				<li ><a href="blog/4/m-vil.html">Móvil</a></li>
+				<li ><a href="blog/5/data.html">Data</a></li>
+				<li ><a href="blog/6/infra.html">Infra</a></li>
+				<li ><a href="blog/7/otros.html">Otros</a></li>
+			</ul>
+		</div>
+	</div>
+</nav>
 
-<div class="pagination">
-	{% if paginator.next_page %}
-		<a class="pagination-item older" href="/page{{paginator.next_page}}">Antiguos</a>
-	{% else %}
-		<span class="pagination-item older">Antiguos</span>
-	{% endif %}
-	{% if paginator.previous_page %}
-		{% if paginator.page == 2 %}
-			<a class="pagination-item newer" href="/">Recientes</a>
-		{% else %}
-			<a class="pagination-item newer" href="/page{{paginator.previous_page}}">Recientes</a>
-		{% endif %}
-	{% else %}
-		<span class="pagination-item newer">Recientes</span>
-	{% endif %}
-</div>
+<!-- Contenido principal -->
+<section class="content-wrapper blog" id="blog-section">
+	<div class="title-block">
+		<h1 class="title"> Blog</h1>
+	</div>
+
+	<!-- Cuadro lateral derecho -->
+	<div class="content-block">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-sm-7 col-md-8 posts-wrapper">
+					<div id="post-list">
+					</div>
+				</div>
+				
+				<div class="col-sm-5 col-md-4 menus-wrapper">
+					<div class="menu-item">
+						<h2 class="title"><i class="fa fa-star"></i>
+							<span>Más leídos</span>
+						</h2>
+						<ul></ul>
+					</div>
+					<div class="menu-item">
+						<h2 class="title"><i class="fa fa-calendar"></i>
+							<span>Archivo</span>
+						</h2>
+						<ul></ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="loading-more" id="loading-more">
+		<ul class="custom-spinner">
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li class="label">Cargando...</li>
+		</ul>
+	</div>
+	<nav id="page-nav"></nav>
+</section>
+
+<!-- SCRIPT propio de la página -->
 <script type="text/javascript" src="js/content/blog.js"></script>
